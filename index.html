@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Todo App</title>
+</head>
+<body>
+  <div class="app">
+    <h1>✅ Todo App</h1>
+
+    <!-- Main input row: text + Add button -->
+    <div class="input-row">
+      <input id="todo-input" type="text" placeholder="What needs to be done?">
+      <button id="add-btn">Add</button>
+    </div>
+
+    <!-- Optional due date row -->
+    <div class="date-row">
+      <label for="due-date">Due date (optional)</label>
+      <input id="due-date" type="date">
+    </div>
+
+    <!-- Filters: All | Active | Done | Overdue -->
+    <div class="filters">
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="active">Active</button>
+      <button class="filter" data-filter="done">Done</button>
+      <button class="filter" data-filter="overdue">Overdue</button>
+    </div>
+
+    <ul id="todo-list"></ul>
+
+    <div id="footer">
+      <span id="count"></span>
+      <button id="clear-done">Clear Done</button>
+    </div>
+  </div>
+</body>
+</html>

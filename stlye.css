@@ -1,0 +1,171 @@
+/* ── CSS Custom Properties (variables) ─────────────── */
+:root {
+  --accent:  #6c63ff;
+  --danger:  #ef4444;
+  --success: #22c55e;
+}
+
+/* ── Box-model reset ─────────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Page ────────────────────────────────────────────── */
+body {
+  font-family: system-ui, sans-serif;
+  background: #f0f2ff;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ── App card ────────────────────────────────────────── */
+.app {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(108, 99, 255, 0.12);
+  padding: 32px;
+  width: 100%;
+  max-width: 480px;
+}
+
+h1 {
+  color: var(--accent);
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+
+/* ── Input row ───────────────────────────────────────── */
+.input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+input:focus {
+  border-color: var(--accent);
+}
+
+button#add-btn {
+  padding: 12px 20px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+button#add-btn:hover {
+  opacity: 0.85;
+}
+
+/* ── Filter buttons ──────────────────────────────────── */
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.filter {
+  padding: 6px 14px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: none;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.15s;
+}
+
+.filter.active {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+/* ── Todo list ───────────────────────────────────────── */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+li:hover {
+  background: #f8f8ff;
+}
+
+/* Strikethrough style for completed items */
+li.done .text {
+  text-decoration: line-through;
+  color: #bbb;
+}
+
+.text {
+  flex: 1;
+  font-size: 15px;
+}
+
+/* ── Delete button ───────────────────────────────────── */
+.del {
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 2px;
+  line-height: 1;
+}
+
+.del:hover {
+  color: var(--danger);
+}
+
+/* ── Footer ──────────────────────────────────────────── */
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+#clear-done {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #aaa;
+  font-size: 13px;
+}
+
+#clear-done:hover {
+  color: var(--danger);
+}
