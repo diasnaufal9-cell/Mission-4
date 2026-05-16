@@ -1,0 +1,186 @@
+/* Reset dasar dan font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background luar (Halaman utama) */
+body {
+  background-color: #0f1115;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #f5f6f9;
+}
+
+/* Wadah utama aplikasi (Card) */
+.app {
+  background-color: #1a1d24;
+  padding: 30px;
+  border-radius: 24px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Judul Utama */
+h1 {
+  font-size: 26px;
+  margin-bottom: 24px;
+  color: #5d5fef; /* Warna ungu/biru neon */
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Baris Input */
+.input-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Kolom Ketik Tugas */
+#todo-input {
+  flex: 1;
+  padding: 14px 16px;
+  background-color: #252932;
+  border: 1px solid #363c4a;
+  border-radius: 12px;
+  color: #f5f6f9;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#todo-input::placeholder {
+  color: #6b7280;
+}
+
+#todo-input:focus {
+  border-color: #5d5fef;
+}
+
+/* Tombol Add */
+#add-btn {
+  padding: 14px 24px;
+  background-color: #5d5fef;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+#add-btn:hover {
+  background-color: #4b4dbf;
+}
+
+#add-btn:active {
+  transform: scale(0.97);
+}
+
+/* Baris Tanggal */
+.date-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* Input Kalender */
+#due-date {
+  padding: 10px 14px;
+  background-color: #252932;
+  border: 1px solid #363c4a;
+  border-radius: 10px;
+  color: #f5f6f9;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Mengubah icon kalender bawaan browser menjadi warna terang */
+#due-date::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(0.8);
+}
+
+/* Bagian Tombol Filter */
+.filters {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.filter {
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 1px solid #363c4a;
+  border-radius: 20px;
+  color: #f5f6f9;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter:hover {
+  background-color: #252932;
+  border-color: #4b5563;
+}
+
+/* Filter yang sedang aktif */
+.filter.active {
+  background-color: #3b3db6;
+  border-color: #5d5fef;
+  color: #ffffff;
+}
+
+/* List tempat tugas muncul (kosong untuk sekarang) */
+#todo-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+/* Gaya opsional jika nanti item list ditambahkan via JavaScript */
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background-color: #252932;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #363c4a;
+}
+
+/* Bagian Bawah (Footer) */
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #252932;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Tombol Clear Done */
+#clear-done {
+  background: none;
+  border: none;
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+#clear-done:hover {
+  color: #ef4444; /* Berubah merah saat disentuh */
+}
